@@ -1,9 +1,3 @@
-/*
-  Timespan picker
-  A range input field for quickly selecting a time range, timespan or duration.
-*/
-
-// Units
 var minutes = 60;
 var hours = 3600;
 var days = 86400;

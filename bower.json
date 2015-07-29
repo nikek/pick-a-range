@@ -1,7 +1,0 @@
-{
-  "name": "pick-a-range",
-  "version": "0.0.0",
-  "dependencies": {
-    "normalize-css": "~2.1.3"
-  }
-}
