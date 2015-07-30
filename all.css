@@ -357,7 +357,7 @@ output,
   right: 0;
   font-size: 1.1em;
   text-transform: uppercase;
-  color: #4990E2;
+  color: #4990e2;
 }
 .wrap .tick-container {
   opacity: 0;
@@ -377,7 +377,7 @@ output,
   padding: 0 4px;
 }
 .timeline-slope {
-  fill: #4990E2;
+  fill: #4990e2;
 }
 .timeline-slope.gray {
   fill: #ccc;
@@ -391,7 +391,7 @@ input[type='range'] {
   box-sizing: border-box;
   padding: 5px;
   z-index: 2;
-  outline: none;
+  outline: 1px solid transparent;
   -webkit-transition: all 130ms;
           transition: all 130ms;
 }
@@ -401,6 +401,9 @@ input[type='range']:hover ~ .tick-container {
 }
 input[type='range']:hover {
   cursor: pointer;
+}
+input[type='range']:focus {
+  outline: 1px solid rgba(73, 144, 226, 0.2);
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
