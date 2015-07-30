@@ -15,6 +15,7 @@
 @height: 55px;
 @margin: 7px;
 @padding: 5px;
+@primary-color: #4990E2;
 
 
 
@@ -42,7 +43,7 @@
     right: 0;
     font-size: 1.1em;
     text-transform: uppercase;
-    color: #4990E2;
+    color: @primary-color;
   }
 
   .tick-container {
@@ -63,7 +64,7 @@
   }
 }
 
-.timeline-slope { fill: #4990E2; }
+.timeline-slope { fill: @primary-color; }
 .timeline-slope.gray { fill: #ccc; }
 
 input[type='range'] {
