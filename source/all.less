@@ -76,7 +76,7 @@ input[type='range'] {
   box-sizing: border-box;
   padding: @padding;
   z-index: 2;
-  outline: none;
+  outline: 1px solid transparent;
 
   transition: all 130ms;
 
@@ -87,6 +87,9 @@ input[type='range'] {
   }
   &:hover {
     cursor: pointer;
+  }
+  &:focus {
+    outline: 1px solid fade(@primary-color, 20%);
   }
 }
 
