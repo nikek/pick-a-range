@@ -1,37 +1,55 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pick-a-range">
-  <meta name="author" content="Niklas Ek">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pick-a-range" />
+    <meta name="author" content="Niklas Ek" />
 
-  <title>Pick-a-range</title>
-  <link rel="stylesheet" href="all.css">
+    <title>Pick-a-range</title>
+    <link rel="stylesheet" href="all.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Pick-a-range</h1>
+      <p>
+        Quickly choose a suitable range, a timespan, or if you wish, a duration.
+      </p>
+    </div>
+    <!-- 
+    <div class="wrap">
+      <svg
+        viewBox="0 0 600 50"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <clipPath id="slope-cut">
+          <rect x="0" y="0" width="100%" height="100%" />
+        </clipPath>
+        <clipPath id="slope-cut-gray">
+          <rect x="0" y="0" width="100%" height="100%" />
+        </clipPath>
+        <path
+          d="M600,50 L600,50 L0,50 L0,0 C30,30 50,47 600,49 Z"
+          class="timeline-slope"
+          clip-path="url(#slope-cut)"
+        ></path>
+        <path
+          d="M600,50 L600,50 L0,50 L0,0 C30,30 50,47 600,49 Z"
+          class="timeline-slope gray"
+          clip-path="url(#slope-cut-gray)"
+        ></path>
+      </svg>
 
-</head>
-<body>
+      <input type="range" />
+      <output></output>
+      <div class="tick-container"></div>
+    </div> -->
 
-  <div class="hero">
-    <h1>Pick-a-range</h1>
-    <p>Quickly choose a suitable range, a timespan, or if you wish, a duration.</p>
-  </div>
+    <ne-pick-a-range></ne-pick-a-range>
 
-  <div class="wrap">
-    <svg viewBox="0 0 600 50" preserveAspectRatio="none"
-      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-      <clipPath id="slope-cut"><rect x="0" y="0" width="100%" height="100%" /></clipPath>
-      <clipPath id="slope-cut-gray"><rect x="0" y="0" width="100%" height="100%" /></clipPath>
-      <path d="M600,50 L600,50 L0,50 L0,0 C30,30 50,47 600,49 Z" class="timeline-slope" clip-path="url(#slope-cut)"></path>
-      <path d="M600,50 L600,50 L0,50 L0,0 C30,30 50,47 600,49 Z" class="timeline-slope gray" clip-path="url(#slope-cut-gray)"></path>
-    </svg>
-
-    <input type="range">
-    <output></output>
-    <div class="tick-container"></div>
-  </div>
-
-  <script src="all.js"></script>
-</body>
+    <script src="all.js"></script>
+  </body>
 </html>
