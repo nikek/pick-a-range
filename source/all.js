@@ -84,16 +84,16 @@ customElements.define(
         { label: "3 months", seconds: 90 * days },
         { label: "2 months", seconds: 60 * days },
         { label: "1.5 months", seconds: 45 * days },
-        { label: "1 month", seconds: 30 * days, tick: true, tickLabel: "mo" },
+        { label: "1 month", seconds: 30 * days, tickLabel: "mo" },
         { label: "3 weeks", seconds: 21 * days },
         { label: "2 weeks", seconds: 14 * days },
         { label: "10 days", seconds: 10 * days },
-        { label: "7 days", seconds: 7 * days, tick: true, tickLabel: "w" },
+        { label: "7 days", seconds: 7 * days, tickLabel: "w" },
         { label: "5 days", seconds: 5 * days },
         { label: "3 days", seconds: 3 * days },
         { label: "2 days", seconds: 2 * days },
         { label: "1.5 days", seconds: 32 * hours },
-        { label: "1 day", seconds: 24 * hours, tick: true, tickLabel: "d" },
+        { label: "1 day", seconds: 24 * hours, tickLabel: "d" },
         { label: "18 hours", seconds: 18 * hours },
         { label: "12 hours", seconds: 12 * hours },
         { label: "9 hours", seconds: 9 * hours },
@@ -102,7 +102,7 @@ customElements.define(
         { label: "3 hours", seconds: 3 * hours },
         { label: "2 hours", seconds: 2 * hours },
         { label: "1.5 hours", seconds: 90 * minutes },
-        { label: "1 hour", seconds: 60 * minutes, tick: true, tickLabel: "h" },
+        { label: "1 hour", seconds: 60 * minutes, tickLabel: "h" },
         { label: "45 min", seconds: 45 * minutes },
         { label: "30 min", seconds: 30 * minutes },
         { label: "20 min", seconds: 20 * minutes },
@@ -118,7 +118,7 @@ customElements.define(
     }
 
     connectedCallback() {
-      this.innerHTML = `<div class="wrap">
+      this.innerHTML = String.raw`<div class="wrap">
     <svg viewBox="0 0 600 50" preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
       <clipPath id="slope-cut"><rect x="0" y="0" width="100%" height="100%" /></clipPath>
@@ -149,7 +149,7 @@ customElements.define(
 
       // Find the ticks in dataset and plot them
       this.timespanTicks = this.timespanOptions
-        .filter((tso) => tso.tick)
+        .filter((tso) => tso.tickLabel)
         .map((tso) => ((tso.index = this.timespanOptions.indexOf(tso)), tso))
         .forEach((tso) => {
           const tick = document.createElement("span");
@@ -167,6 +167,7 @@ customElements.define(
       // set initial state
       this.setValue();
     }
+
     setValue(value = this.range.value) {
       const clipPathWidth = (value / this.range.max) * 100;
       this.slopeClipPath.setAttribute(
